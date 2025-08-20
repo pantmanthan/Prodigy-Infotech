@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tic-Tac-Toe </title>
+  <link rel="stylesheet" href="tic.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app__header">
+      <h1><span>Tic-Tac-Toe</span></h1>
+      <p class="subtitle"> </p>
+    </header>
+
+    <section class="panel glass">
+      <div class="controls">
+        <div class="control">
+          <label>Mode</label>
+          <div class="segmented">
+            <button class="seg active" data-mode="pvp">Player vs Player</button>
+            <button class="seg" data-mode="ai">Player vs AI</button>
+          </div>
+        </div>
+
+        <div class="control">
+          <label>Start as</label>
+          <div class="segmented">
+            <button class="seg active" data-start="X">X</button>
+            <button class="seg" data-start="O">O</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="score">
+        <div class="card">
+          <div class="label">Player X</div>
+          <div class="value" id="scoreX">0</div>
+        </div>
+        <div class="card">
+          <div class="label">Draw</div>
+          <div class="value" id="scoreD">0</div>
+        </div>
+        <div class="card">
+          <div class="label">Player O</div>
+          <div class="value" id="scoreO">0</div>
+        </div>
+      </div>
+
+      <div class="status" id="status">X’s turn</div>
+
+      <div id="board" class="board">
+        <!-- 9 cells -->
+        <button class="cell" data-index="0"></button>
+        <button class="cell" data-index="1"></button>
+        <button class="cell" data-index="2"></button>
+        <button class="cell" data-index="3"></button>
+        <button class="cell" data-index="4"></button>
+        <button class="cell" data-index="5"></button>
+        <button class="cell" data-index="6"></button>
+        <button class="cell" data-index="7"></button>
+        <button class="cell" data-index="8"></button>
+      </div>
+
+      <div class="actions">
+        <button id="playAgain" class="btn">Play Again</button>
+        <button id="resetAll" class="btn outline">Reset Scores</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small></small>
+    </footer>
+  </div>
+
+  <script src="tic.js"></script>
+</body>
+</html>
