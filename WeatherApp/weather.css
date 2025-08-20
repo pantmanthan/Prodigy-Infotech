@@ -1,0 +1,118 @@
+/* Blue theme like the slide */
+:root{
+  --bg1:#0b1736;
+  --bg2:#0f2a6e;
+  --card:#0e1f4d;
+  --text:#eaf1ff;
+  --muted:#9eb3ff;
+  --accent:#6ee7ff;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,Segoe UI,Roboto,Arial;
+  color:var(--text);
+  background: radial-gradient(1200px 600px at 80% -10%, #16357d 0%, transparent 60%),
+              radial-gradient(800px 500px at 10% 100%, #1b3b8f 0%, transparent 60%),
+              linear-gradient(135deg,var(--bg1),var(--bg2));
+  min-height:100dvh;
+  display:grid;
+  place-items:center;
+  padding:24px;
+}
+
+.app{
+  width:min(920px,98vw);
+}
+
+.top h1{
+  margin:0 0 12px;
+  font-weight:800;
+  letter-spacing:.5px;
+}
+.top h1 span{ 
+  font-weight:600; 
+  color:var(--muted);
+}
+
+.controls{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:16px;
+}
+
+#search-form{
+  display:flex;
+  gap:10px;
+  flex:1;
+}
+#city-input{
+  flex:1;
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px solid #2b3e8f;
+  background:#0d1a3d;
+  color:var(--text);
+  outline:none;
+}
+#search-form button, .ghost{
+  padding:14px 18px;
+  border-radius:14px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+  background:linear-gradient(135deg,#4a7dff,#61dafb);
+  color:#061028;
+  box-shadow:0 8px 24px rgba(50,130,255,.35);
+  transition:transform .08s ease;
+}
+.ghost{
+  background:transparent;
+  color:var(--muted);
+  border:1px solid #274a9f;
+  box-shadow:none;
+}
+#search-form button:active,.ghost:active{ transform:translateY(1px); }
+
+.card{
+  background:linear-gradient(160deg,#0a1a43,#0b234f);
+  border:1px solid #1e3d8f;
+  border-radius:22px;
+  padding:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+  backdrop-filter: blur(6px);
+}
+.hidden{ display:none; }
+
+.card-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding-bottom:8px;
+  border-bottom:1px dashed #284594;
+}
+#place{ margin:0; font-size:28px; }
+#desc{ margin:6px 0 0; color:var(--muted); }
+
+#icon{ width:84px; height:84px; image-rendering:-webkit-optimize-contrast; }
+
+.stats{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:14px;
+  padding-top:14px;
+}
+.stat{
+  background:var(--card);
+  border:1px solid #203a84;
+  border-radius:18px;
+  padding:14px;
+  text-align:center;
+}
+.label{ color:var(--muted); font-size:14px; }
+.value{ font-size:22px; font-weight:700; margin-top:6px; }
+
+.msg{ margin-top:12px; color:#ffd8d8; min-height:20px; }

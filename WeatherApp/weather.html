@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App </title>
+  <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1><span>Weather App</span></h1>
+    </header>
+
+    <section class="controls">
+      <form id="search-form">
+        <input
+          id="city-input"
+          type="text"
+          placeholder="Enter city name (e.g., Delhi)"
+          autocomplete="off"
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+      <button id="geo-btn" class="ghost">Use My Location</button>
+    </section>
+
+    <section id="card" class="card hidden">
+      <div class="card-header">
+        <div>
+          <h2 id="place">—</h2>
+          <p id="desc">—</p>
+        </div>
+        <img id="icon" alt="weather icon" />
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="label">Temperature</div>
+          <div class="value"><span id="temp">—</span>°C</div>
+        </div>
+        <div class="stat">
+          <div class="label">Feels like</div>
+          <div class="value"><span id="feels">—</span>°C</div>
+        </div>
+        <div class="stat">
+          <div class="label">Humidity</div>
+          <div class="value"><span id="humidity">—</span>%</div>
+        </div>
+        <div class="stat">
+          <div class="label">Wind</div>
+          <div class="value"><span id="wind">—</span> m/s</div>
+        </div>
+      </div>
+    </section>
+
+    <p id="msg" class="msg"></p>
+  </main>
+
+  <script src="weather.js"></script>
+</body>
+</html>
